@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Flavor Spot - Bootstrap Menu</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-bottom: 5px solid var(--bs-primary);
+        }
+
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+
+
+        @keyframes fadeInSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .hero-content {
+            animation: fadeInSlideUp 1s ease-out 0.2s forwards;
+            opacity: 0;
+        }
+
+
+        .card-animated {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+
+
+        .card-animated.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#">The Flavor Spot</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact & Location</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <header class="hero-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-md-7 hero-content">
+                    <h1 class="display-4 fw-light text-dark mb-3">Experience Authentic Cuisine</h1>
+                    <p class="lead text-muted">A perfect blend of traditional flavors and modern presentation. We use
+                        only the freshest, locally-sourced ingredients every day to craft dishes you'll love.</p>
+                    <a href="#menu" class="btn btn-primary btn-lg mt-3 shadow">View Our Full Menu</a>
+                </div>
+
+                <div class="col-md-5 d-none d-md-block">
+
+                    <img src="https://placehold.co/600x400/28a745/ffffff?text=Delicious+Food"
+                        class="img-fluid rounded shadow-lg" alt="Delicious food illustration">
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section id="menu" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5 fw-bold text-secondary">Our Signature Dishes</h2>
+
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 card-animated">
+
+                        <img src="1.webp" class="card-img-top" alt="Spicy Chicken Delight">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">Spicy Chicken Delight</h5>
+                            <p class="card-text text-muted">Grilled chicken marinated in a secret blend of herbs and
+                                spices, served with saffron rice.</p>
+                            <span class="badge bg-success float-end fs-6 p-2">₹550</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 card-animated">
+
+                        <img src="2.webp" class="card-img-top" alt="Crispy Veggie Rolls">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">Crispy Veggie Rolls</h5>
+                            <p class="card-text text-muted">Hand-rolled spring rolls filled with seasonal vegetables,
+                                deep-fried to perfection.</p>
+                            <span class="badge bg-success float-end fs-6 p-2">₹280</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 card-animated">
+
+                        <img src="3.webp" class="card-img-top" alt="Chocolate Lava Cake">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">Chocolate Lava Cake</h5>
+                            <p class="card-text text-muted">Rich, warm chocolate cake with a molten center, served with
+                                vanilla bean ice cream.</p>
+                            <span class="badge bg-success float-end fs-6 p-2">₹350</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="contact" class="bg-dark text-white mt-5 pt-4 pb-2">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <h5 class="text-warning">The Flavor Spot</h5>
+                    <p class="text-muted small">We look forward to serving you!</p>
+
+                    <p class="text-white mb-1">Email: <a href="mailto:dipdas5780@gmail.com"
+                            class="text-decoration-none text-white-50">dipdas5780@gmail.com</a></p>
+
+                    <p class="text-white">Phone: +91 6289375635</p>
+                </div>
+
+                <div class="col-md-6 text-md-end">
+                    <h5 class="mb-3 text-warning">Find Us</h5>
+                    <p class="text-muted small">123 Culinary St, Food City, 54321</p>
+                    <div class="text-muted small">
+                        <a href="#" class="text-white me-3 text-decoration-none">Privacy Policy</a>
+                        <a href="#" class="text-white text-decoration-none">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center border-top border-secondary pt-3 mt-3">
+                <p class="small text-muted">&copy; 2024 The Flavor Spot. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const cards = document.querySelectorAll('.card-animated');
+
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.2
+            };
+
+
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add('visible');
+
+
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+
+
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+
+</html>
